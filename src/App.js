@@ -2,21 +2,10 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./Pages/Layout";
 import MealForm from "./Pages/MealForm";
-
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-
-// import MealItem from "./component/MealItem";
 import MealList from "./component/MealList";
-import './component/Card.css';
-
-// import Caloriesummary from "./component/Caloriesummary";
-import './component/Card.css';
-
-
-
-
-
+import NutritionTable from "./component/NutritionTable";
 
 export default function App() {
     // Major form states
@@ -72,7 +61,6 @@ export default function App() {
         });
     }
 
-
     useEffect(() => {
         if(notification){
             const timer = setTimeout(() => {
@@ -80,12 +68,7 @@ export default function App() {
             },3000)
             return () => clearInterval(timer)
         }
-        
     },[notification])
-
-   
-
-
 
     useEffect(() => {
         fetch('https://nutrition-api-nyjf.onrender.com/nutritions')
@@ -96,9 +79,6 @@ export default function App() {
             .then(data => setNutrition(data))
             .catch(error => console.error("Fetch error:", error));
     }, []);
-    
-
-
 
     return (
         <BrowserRouter>
@@ -107,7 +87,6 @@ export default function App() {
                     <Route index element={
                         <Home 
                             nutritions={nutritions} 
-                            // deleteNutrition={deleteNutrition} 
                         />
                     } />
                     <Route path="/form" element={
@@ -115,22 +94,19 @@ export default function App() {
                             currentNutrition={currentNutrition}
                             handleChange={handleChange}
                             handleSubmit={handleSubmit}
-
                             notification={notification}
                         />}
-                            />
-
-                    <Route path="/list" element={<MealList
+                    />
+                    <Route path="/list" element={
+                        <MealList
                             nutritions={nutritions}
                             setNutrition={setNutrition}
-                    />} />
+                        />} 
+                    />
                     <Route path="/about" element={<About />} />
+                    <Route path="/nutrition-table" element={<NutritionTable />} />
                 </Route>
             </Routes>
         </BrowserRouter>
-
     );
-
 }
-
-
