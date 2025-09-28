@@ -1,0 +1,68 @@
+{
+  "nutritions": [
+    {
+      "id": "4e98",
+      "itemName": "Apple",
+      "calories": "30",
+      "protein": "25",
+      "carbs": "39",
+      "fat": "40"
+    },
+    {
+      "id": "59c3",
+      "itemName": "Mango",
+      "calories": "29",
+      "protein": "29",
+      "carbs": "29",
+      "fat": "29"
+    },
+    {
+      "id": "75e0",
+      "itemName": "Apple",
+      "calories": "30",
+      "protein": "30",
+      "carbs": "40",
+      "fat": "23"
+    },
+    {
+      "id": "c4ad",
+      "itemName": "Apple",
+      "calories": "2032993",
+      "protein": "4755",
+      "carbs": "4444",
+      "fat": "4"
+    },
+    {
+      "id": "a11e",
+      "itemName": "Mango",
+      "calories": "47",
+      "protein": "56",
+      "carbs": "90",
+      "fat": "56"
+    },
+    {
+      "id": "e740",
+      "itemName": "WaterMelon",
+      "calories": "20",
+      "protein": "39",
+      "carbs": "40",
+      "fat": "50"
+    },
+    {
+      "id": "b4a2",
+      "itemName": "Watermelon",
+      "calories": "20",
+      "protein": "15",
+      "carbs": "30",
+      "fat": "20"
+    },
+    {
+      "id": "0bf4",
+      "itemName": "ovacado",
+      "calories": "30",
+      "protein": "40",
+      "carbs": "100",
+      "fat": "50"
+     }
+  ]
+}
